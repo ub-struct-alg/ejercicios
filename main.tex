@@ -1,0 +1,51 @@
+\documentclass[a4paper,11pt]{exam}
+\usepackage{graphicx}
+\usepackage{ifpdf}
+\ifpdf
+   % put here packages only for the PDF:
+   \DeclareGraphicsExtensions{.pdf,.png,.jpg,.mps}
+   \usepackage{hyperref} 
+\else
+   % put here packages only for the DVI:
+\fi
+ 
+% put all the other packages here:
+\usepackage[spanish]{babel} 
+\usepackage{forloop} 
+\usepackage{amsfonts} 
+\usepackage{amsmath}
+%\usepackage{mystyle}
+
+ 
+\begin{document}
+ 
+\input{./tex/title.tex}
+\maketitle
+\tableofcontents
+\listoffigures
+\listoftables
+ 
+
+\begin{questions} % Begins the questions environment
+\newcounter{questionnumber}
+
+\forLoop[1]{1}{50}{questionnumber}{
+\input{./enunciados/\thequestionnumber.tex}
+}
+
+\begin{solution} 
+Here is the solution 
+\end{solution}
+
+\end{questions}
+ 
+\appendix
+\input{./tex/myappendix.tex}
+ 
+ 
+% Bibliography:
+\clearpage
+\addcontentsline{toc}{chapter}{Bibliography}
+\input{./tex/mybibliography.tex}
+ 
+\end{document}
