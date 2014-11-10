@@ -1,0 +1,42 @@
+\begin{solution} 
+Factorizamos $15=3\cdot5$ y aplicamos el 3r y 2º Teoremas de Sylow:
+
+\begin{equation}
+ \left.\begin{aligned}
+		|S_3| &= 3\\
+		n_3 &\equiv 1 (mod 3)\\
+		n_3 &\mid [G:S_3]=5
+       \end{aligned}
+ \right\}
+ \implies n_3 = 1 \iff S_3 \triangleleft G
+\end{equation}
+\begin{equation} 
+ \left.\begin{aligned}
+		|S_5| &= 5\\
+		n_5 &\equiv 1 (mod 5)\\
+		n_5 &\mid [G:S_5]=3
+       \end{aligned}
+ \right\}
+ \implies n_5 = 1 \iff S_5 \triangleleft G
+\end{equation}
+
+Donde $S_p$ es un p-subgrupo de Sylow de $G$ y $n_p$ la cantidad de estos.\\
+$S_3$ y $S_5$ son ciclicos por ser de orden primo. Tomemos $S_3=\langle a \rangle$ y $S_5=\langle b \rangle$.\\
+Observemos que todos los elementos de $S_3$ y $S_5$, exceptuando el neutro, son generadores de estos. De lo que se deduce inmediatamente que $S_3 \cap S_5 = \{e\}$.\\
+Veamos que $a$ y $b$ conmutan:
+
+\begin{align} 
+ab=ba &\iff aba^{-1}b^{-1} = e \\
+\left.\begin{aligned}
+	\underbrace{a b a^{-1}}_{\in S_5 \Leftarrow S_5 \triangleleft G} b^{-1} &\in S_5 \\
+	a\underbrace{b a^{-1} b^{-1}}_{\in S_3 \Leftarrow S_3 \triangleleft G} &\in S_3
+   \end{aligned}
+\right\}
+&\implies aba^{-1}b^{-1} \in S_3 \cap S_5 = \{e\} \\
+ord(ab) = mcm(ord(a), ord(b)) &= mcm(3, 5) = 15\\
+ord(ab) = |G| &\implies G = \langle ab \rangle\\
+&\Box
+\end{align}
+
+
+\end{solution}

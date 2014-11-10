@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{exam}
+\documentclass[a4paper,11pt,answers]{exam}
 \usepackage{graphicx}
 \usepackage{ifpdf}
 \ifpdf
@@ -10,13 +10,18 @@
 \fi
  
 % put all the other packages here:
+\usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel} 
 \usepackage{forloop} 
 \usepackage{amsfonts} 
 \usepackage{amsmath}
 %\usepackage{mystyle}
 
- 
+\pagestyle{headandfoot}
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+\runningheadrule
+\runningheader{Estructuras Algebraicas}{Problemas}{\href{https://github.com/ub-struct-alg/ejercicios}{github.com/ub-struct-alg}}
+\runningfooter{}{Página \thepage\ de \numpages}{}
 \begin{document}
  
 \input{./tex/title.tex}
@@ -26,16 +31,13 @@
 \listoftables
  
 
-\begin{questions} % Begins the questions environment
+\begin{questions}
 \newcounter{questionnumber}
 
 \forLoop[1]{1}{50}{questionnumber}{
 \input{./enunciados/\thequestionnumber.tex}
+\input{./soluciones/\thequestionnumber.tex}
 }
-
-\begin{solution} 
-Here is the solution 
-\end{solution}
 
 \end{questions}
  

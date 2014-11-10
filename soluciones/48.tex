@@ -1,0 +1,41 @@
+\begin{solution} 
+Supongamos $p=q$
+
+\begin{align}
+|Z(G)| \equiv |G| \equiv p^2 \equiv 0 (mod p) &\implies p \mid  |Z(G)|\\
+|G/Z(G)| = 
+  \begin{cases}
+   1 & \text{si } |Z(G)|=p^2 \\
+   p & \text{si } |Z(G)|=p
+  \end{cases} &\implies \text{$G/Z(G)$ es abeliano} \implies \text{$G/Z(G)$ es resoluble}\\
+ \left.\begin{aligned}
+		Z(G) \triangleleft G\\
+		\text{$Z(G)$ resoluble}\\
+		\text{$G/Z(G)$ resoluble}\\
+       \end{aligned}
+ \right\}
+ &\implies \text{$G$ es resoluble}
+\end{align}
+
+Supongamos ahora que $p \neq q$. Sin perdida de generalidad, $p < q$. Sean $S_q$ un q-subgrupo de Sylow y $n_q$ la cantidad de estos:
+
+\begin{align}
+ \left.\begin{aligned}
+		n_q &\equiv 1 (mod q)\\
+		n_q &\mid [G:S_q]=p
+       \end{aligned}
+ \right\}
+ &\implies n_q = 1 \iff S_q \triangleleft G\\
+|S_q| = q \implies \text{$S_q$ es ciclico} &\implies \text{$S_q$ es abeliano} \implies \text{$S_q$ es resoluble}\\
+|G/S_q| = p \implies \text{$G/S_q$ es ciclico} &\implies \text{$G/S_q$ es abeliano} \implies \text{$G/S_q$ es resoluble}\\
+ \left.\begin{aligned}
+		&S_q \triangleleft G\\
+		&\text{$S_q$ resoluble}\\
+		&\text{$G/S_q$ resoluble}\\
+       \end{aligned}
+ \right\}
+ &\implies \text{$G$ es resoluble}\\
+ &\Box
+\end{align}
+
+\end{solution}
