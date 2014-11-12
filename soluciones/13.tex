@@ -1,0 +1,29 @@
+\begin{solution}
+
+\begin{enumerate}
+\item Calculamos de la forma $\sigma(\tau(i))$ y viceversa $\forall i$ $1\leq i \leq 9$ \\
+$\sigma\tau = \begin{bmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+                                3 & 3 & 1 & 7 & 4 & 9 & 5 & 6 & 8
+                          \end{bmatrix}$                
+$ \tau\sigma = \begin{bmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+                                1 & 4 & 7 & 6 & 9 & 2 & 3 & 5 & 8
+                         \end{bmatrix}$ \\
+
+\item Ciclos:\\
+      $\sigma = ( 1 2 9 5 7 3 )( 4 8 )$ \\
+      $\tau = ( 1 7 9 4 5 8 6 2 )$ \\
+      Transposiciones: \\
+      $\sigma = ( 1 2 )( 2 9 )( 9 5 )( 5 7 )( 7 3 )( 4 8 )$ \\
+      $\tau = ( 1 7 )( 7 9 )( 9 4 )( 4 5 )( 5 8 )( 8 6 )( 6 2 )$\\
+      $\Sigma : \\
+      \Sigma(\sigma):(-1)^6 = 1 \\
+      \sigma(\tau): (-1)^7= -1 $\\
+\item $\sigma = ( 1 2 9 5 7 3 )( 4 8 ) = S_6 \cup S_2$. Por lo que: $S_6^6=Id , S_2^2= Id$.\\
+Entonces: \\
+$2012 \equiv 2 (mod 6) \to 335*6+2 \\
+ 2012 \equiv 0 (mod 6) \to 1006*2 $\\
+ Por lo que:\\
+ $\sigma^2012 = S_6^2$
+\end{enumerate}
+
+\end{solution}
