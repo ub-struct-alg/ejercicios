@@ -1,17 +1,19 @@
 \begin{solution}
-Toda permutación descompone en producto de transposiciones. Esta descomposición no es única, más su $\Sigma $ se mantiene. Es decir, son o pares o impares.\\
+\\Toda permutación descompone en producto de transposiciones. Esta descomposición no es única, más su $\varepsilon$ se mantiene. Es decir, son o pares o impares.\\
 Sea la aplicación: \\
-\begin{aligned}
+\begin{align}
 f: P \to I \\
 \sigma \mapsto \tau\sigma
-\end{aligned}
+\end{align}
 Que envia las permutaciones pares a las impares, solo queda ver que esta es biyectiva.\\
 \begin{enumerate}
 \item inyectiva: \\
-     \begin{aligned}$f(\sigma) = f(\xi) \implies \sigma = \xi ?\\
-     \tau\sigma = \tau\xi \Rightarrow \sigma= \xi \end{aligned} \\
+\begin{align}
+f(\sigma) = f(\xi) \implies \sigma = \xi ?\\
+\tau\sigma = \tau\xi \implies \sigma= \xi 
+\end{align}
 \item exhaustiva: \\
-    Si, pues $f(\tau\sigma)= \tau\tau\sigma=\sigma. \\
+    Si, pues $f(\tau\sigma)= \tau\tau\sigma=\sigma$.
 \end{enumerate}
-Como $f$ es biyectiva, entonces tendrá siempre la misma cantidad de permutaciones pares que impares;ergo la mitad de $S_n$.
+Como $f$ es biyectiva, entonces tendrá siempre la misma cantidad de permutaciones pares que impares; ergo la mitad de $S_n$.
 \end{solution}
