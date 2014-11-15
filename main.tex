@@ -20,26 +20,39 @@
 \pagestyle{headandfoot}
 \renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
 \runningheadrule
-\runningheader{Estructuras Algebraicas}{Problemas}{\href{https://github.com/ub-struct-alg/ejercicios}{github.com/ub-struct-alg}}
+\runningheader{Estructuras Algebraicas}{Problemas}{
+\href{https://github.com/ub-struct-alg/ejercicios}{github.com/ub-struct-alg}
+}
 \runningfooter{}{Página \thepage\ de \numpages}{}
+
 \begin{document}
- 
 \input{./tex/title.tex}
 \maketitle
+
 \tableofcontents
 \listoffigures
 \listoftables
  
-
-\begin{questions}
 \newcounter{questionnumber}
 
-\forLoop[1]{1}{50}{questionnumber}{
+\newpage 
+\section{Grupos}
+\begin{questions}
+\forLoop[1]{1}{65}{questionnumber}{
 \input{./enunciados/\thequestionnumber.tex}
 \input{./soluciones/\thequestionnumber.tex}
 }
-
 \end{questions}
+
+\newpage 
+\section{Anillos}
+\begin{questions}
+\forLoop[1]{1}{36}{questionnumber}{
+\input{./enunciados/anillos/\thequestionnumber.tex}
+\input{./soluciones/anillos/\thequestionnumber.tex}
+}
+\end{questions}
+
  
 \appendix
 \input{./tex/myappendix.tex}
