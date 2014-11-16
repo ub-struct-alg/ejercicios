@@ -1,3 +1,45 @@
-\begin{solution}
+\begin{solution}\\
+Tenemos que $a \in A$ es unidad.
+\begin{align}
+\exists b \in A \mid ab = 0 
+&\implies 0 = a^{-1}0 = a^{-1}(ab) = 1b = b \implies\\
+b = 0 &\iff a \text{ no es un divisor de cero}\\
+&\Box
+\end{align}
+
+Tenemos que $I \subset A$ es un ideal.
+\begin{align}
+\exists u \in I \mid u \in A^* &\implies u^{-1}u = 1 \in I\\
+a \in A \implies a = a \cdot 1 \in I &\implies I=A\\
+&\Box
+\end{align}
+
+Tenemos $a \in A$ y $u \in A^*$.
+\begin{align}
+u \in A \land a \in (a)
+&\implies ua \in (a) 
+\implies (ua) \subset (a)\\
+u^{-1} \in A \land ua \in (ua)
+&\implies u^{-1}ua = a \in (ua) 
+\implies (a) \subset (ua)\\
+(ua) \subset (a) \land (a) \subset (ua) &\iff (ua) = (a)\\
+&\Box
+\end{align}
+
+Tenemos que $A$ es un dominio de integridad y $a,b \in A$. \\
+Ya hemos demostrado en 1.c $\exists u \in A^* \mid b = au \implies (a) = (b)$.\\
+Solo queda demostrar $(a) = (b) \implies \exists u \in A^* \mid b = au$:
+\begin{align}
+(a) = (b) \implies a \in (b) &\implies \exists c \in A \mid a = bc \\
+(a) = (b) \implies b \in (a) &\implies \exists d \in A \mid b = ad \\
+b = ad = bcd \implies b(1 - cd) = 0 
+&\xRightarrow[\text{de integridad}]{\text{A es dominio}}
+\begin{cases}
+b = 0 \implies a = bc = 0 & u:=1\\
+\lor\\
+1 = cd \implies d \in A^* & u:=d
+\end{cases}\\
+&\Box
+\end{align}
 
 \end{solution}
