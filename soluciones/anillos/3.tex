@@ -1,0 +1,41 @@
+\begin{solution}
+Supongamos que $(2,X)$ es principal e intentaremos llegar a contradicción.
+\begin{align}
+\exists c \in \mathbb{Z}[X] \mid (2,X) = (c) 
+\implies 2 \in (c) 
+\implies c|2
+\implies c \in \{-2,-1,1,2\}\\
+x \in (c) = (2,X) 
+\implies \exists m,n\in \mathbb{Z} \mid x = 2m + Xn\\
+\end{align}
+
+Supongamos que $c=\pm1$:
+\begin{align}
+c=\pm1 
+\implies (c) = \mathbb{Z}[X]
+&\implies 1 \in (c)\\
+1 = 2m + Xn 
+\implies \begin {cases}
+m=\frac{1}{2} \notin \mathbb{Z}[X]\\
+n=0
+\end{cases}
+&\implies 1 \notin (2,X) = (c)
+\end{align}
+Contradicción!
+
+Ahora supongamos que $c=\pm2$:
+\begin{align}
+(c) &= (2)\\
+X \in (2,X)=(c)=(2)
+&\implies \exists n \in \mathbb{Z}[X] \mid X = 2n\\
+X=2n &\implies n = \frac{X}{2}\\
+n = \frac{X}{2} &\notin \mathbb{Z}[X]
+\end{align}
+Contradicción!
+
+Hemos demostrado que todos los valores candidatos de $c$ llevan a contradicción.
+Por lo que nuestra hipotesis ($(2,X)$ es principal) es erronea. 
+Hemos demostrado, pues, que $(2,X)$ no es principal.\\
+$\Box$
+
+\end{solution}
