@@ -1,0 +1,71 @@
+\begin{solution}
+
+Tenemos $d \in mcd(a,b)$.
+\begin{align}
+x \in (a,b) &\implies \exists m,n \in A \mid x = ma + nb \\
+\left.\begin{aligned}
+       d|a &\implies a=a'd\\
+       d|b &\implies b=b'd
+      \end{aligned}
+\right\}
+&\implies x = ma + nb = ma'd + nb'd = (ma' + nb')d \implies d|x\\
+d|x &\implies x \in (d) \implies (a,b) \subseteq (d)\\
+&\Box
+\end{align}
+
+Tenemos $A$ dominio de integridad, $d \in mcd(a,b)$ y $d'\in mcd(a,b)$.
+\begin{align}
+\left.\begin{aligned}
+       \exists c \in A \mid (c|a \wedge c|b) \implies c|d \\
+       d'|a \\
+       d'|b
+      \end{aligned}
+\right\}
+&\implies d'|d \implies d \in (d') \implies (d) \subset (d')\\
+\left.\begin{aligned}
+       \exists c \in A \mid (c|a \wedge c|b) \implies c|d' \\
+       d|a \\
+       d|b
+      \end{aligned}
+\right\}
+&\implies d|d' \implies d' \in (d) \implies (d') \subset (d)\\
+(d') \subset (d) \land (d) \subset (d') &\iff (d) = (d')
+\xLeftrightarrow[1.d]{\text{Ejercicio}} \exists u \in A^* \mid d=ud'\\
+&\Box
+\end{align}
+
+Tenemos que $A$ es $DIP$. \\
+Para ver $d \in mcd(a,b) \implies (a,b) = (d)$ solo hace falta demostrar
+$d \in mcd(a,b) \implies (a,b) \supset (d)$ ya que $\subseteq$ esta demostrado
+en el apartado a.
+\begin{align}
+(a,b) \text{ es principal} &\implies \exists c \in A \mid (a,b) = (c) \\
+(a,b) = (c) &\implies a \in (c) \implies c|a \\
+(a,b) = (c) &\implies b \in (c) \implies c|b \\
+c|a \land c|b \xRightarrow[d \in mcd(a,b)]{} c|d 
+&\implies d \in (c) 
+\implies (d) \subset (c)=(a,b)
+\end{align}
+Veamos $d \in mcd(a,b) \Leftarrow (a,b) = (d)$.
+\begin{align}
+(a,b) = (d) \implies a \in (d) &\implies d|a \\
+(a,b) = (d) \implies b \in (d) &\implies d|b \\
+x \in (a,b) \implies \exists m,n \in A \mid x = ma + nb \\
+\exists c \in A \mid (c|a \wedge c|b) 
+\implies x = ma'c + nb'c &= (ma' + nb')c 
+\implies c|x\\
+c|x
+\implies x \in (c)
+\implies (d) = (a,b) \subset (c)
+&\implies d \in (c)
+\implies c|d\\
+\left.\begin{aligned}
+       d|a \\
+       d|b \\
+       \exists c \in A \mid (c|a \wedge c|b) \implies c|d \\
+       \end{aligned}
+\right\}
+&\implies d \in mcd(a,b)
+\end{align}
+Demostradas ambas implicaciones, tenemos demostrado el si y solo si. $\Box$
+\end{solution}

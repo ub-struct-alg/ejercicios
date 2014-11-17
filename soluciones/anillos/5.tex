@@ -1,0 +1,38 @@
+\begin{solution}
+\begin{align}
+m&:= gr(f)\\
+n&:= gr(g)\\
+f^{(m)}&:= f\\
+f^{(i)}_j &:= \text{coeficiente $j$ de $f^{(i)}$}\\
+\end{align}
+Empleamos el algoritmo de división tal cual:
+\begin{align}
+&i:=m\\
+&\text{mientras $i \ge n$ hacer:}\\
+&\quad f^{(i-1)}(x) := f^{(i)}(x) - f^{(i)}_ix^{i-n}g(x)\\
+&\quad i:= i - 1\\
+&q:=\sum_{i=n}^{m} f^{(i)}_ix^{i-n}\\
+&r:=f^{(n-1)}
+\end{align}
+Encontramos $q,r$ por lo que demostramos su existencia. 
+$q$ es unico porque el primer coeficiente de $q$ y $f$ tiene que se el mismo, 
+por lo que el primer coeficiente de $q$ es unico. 
+Aplicamos recursión y obtenemos que todos los coeficientes de $q$ son unicos,
+por lo que tenemos que $q$ es unico. 
+Inmediatamente, $r := f-qg$ tambien es unico. 
+Queda demostrada la unicidad de $q$ y $r$.$\Box$
+
+Como ejemplo de no existencia tenemos $3,2\in\mathbb{Z}$ ya que 
+el residuo debe de ser 0 y eso solo ocurre con
+el cociente perteneciente a $\mathbb{Q}\setminus\mathbb{Z}$.\\
+Como ejemplo de existencia pero no unicidad tomemos en $\mathbb{Z}/8\mathbb{Z}$,
+$f:=6x^2$ y $g:=2x$. Tenemos almenos 2 soluciones distintas:
+\begin{align}
+q&=3x\\
+r&=0\\
+2x3x+0 &= 6x^2\\
+q'&=4x^3+3x\\
+r'&=0\\
+2x(4x^3+3x)+0 &= 8x^4 + 6x^2 = 0 + 6x = 6x^2 
+\end{align}
+\end{solution}
